@@ -1,0 +1,34 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace booking_backend.Models
+{
+    [Table("tbl_Booking")]
+    public class Booking
+    {
+        [Key]
+        [Column("BookingId")]
+        public int BookingId { get; set; }
+
+        [Column("BusinessId")]
+        public int BusinessId { get; set; }
+
+        [Column("ServiceId")]
+        public int ServiceId { get; set; }
+
+        [Column("CustomerId")]
+        public int CustomerId { get; set; }
+
+        [Column("StartTime")]
+        public DateTime StartTime { get; set; }
+
+        [Column("EndTime")]
+        public DateTime EndTime { get; set; }
+
+        [Column("Status")]
+        public required string Status { get; set; }
+
+        [Column("CreatedAt")]
+        public DateTime CreatedAt { get; set; }
+    }
+}
