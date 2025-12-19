@@ -1,0 +1,26 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace booking_backend.Models
+{
+    [Table("tbl_Business")]
+    public class Business
+    {
+        [Key]
+        [Column("BusinessId")]
+        public int BusinessId { get; set; }
+
+        [Column("Name")]
+        public required string Name { get; set; }
+
+        [Column("Description")]
+        public string? Description { get; set; }
+
+        [Column("Email")]
+        public string? Email { get; set; }
+
+        [Column("Phone")]
+        public string? Phone { get; set; }
+
+    }
+}

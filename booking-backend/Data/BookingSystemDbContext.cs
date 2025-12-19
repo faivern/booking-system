@@ -15,6 +15,5 @@ namespace booking_backend.Data
         public DbSet<OpeningHour> OpeningHours { get; set; }
         public DbSet<OtpCode> OtpCodes { get; set; }
         public DbSet<Service> Services { get; set; }
-
-        }
+    }
 }

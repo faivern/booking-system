@@ -3,40 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\bookings\\createbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\bookings\\createbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\openinghour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\openinghour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\bookings\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\bookings\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\auth\\requestotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\auth\\requestotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\services\\updateservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\services\\updateservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\booking-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:booking-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\services\\createservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\services\\createservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\openinghours\\createopeninghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\openinghours\\createopeninghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\openinghours\\openinghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\openinghours\\openinghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\openinghours\\updateopeninghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\openinghours\\updateopeninghourdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\services\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\services\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\bookings\\updatebookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\bookings\\updatebookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\booking-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:booking-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\data\\bookingsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:data\\bookingsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\businesses\\businessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\businesses\\businessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\businesses\\createbusinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\businesses\\createbusinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\businesses\\updatebusinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\businesses\\updatebusinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\customers\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\customers\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\customers\\createcustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\customers\\createcustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\customers\\updatecustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\customers\\updatecustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|c:\\users\\gusta\\desktop\\booking-system\\booking-backend\\dtos\\auth\\verifyotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957ED125-89E5-A2E3-616A-D19437004F16}|booking-backend.csproj|solutionrelative:dtos\\auth\\verifyotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,58 +90,266 @@
       "DocumentGroups": [
         {
           "DockedWidth": 218,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Service.cs",
-              "RelativeDocumentMoniker": "Models\\Service.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Service.cs",
-              "RelativeToolTip": "Models\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T13:19:36.282Z",
+              "WhenOpened": "2025-12-19T14:34:51.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateBookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\CreateBookingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Bookings\\CreateBookingDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\CreateBookingDto.cs",
+              "RelativeToolTip": "DTOs\\Bookings\\CreateBookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:59:49.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OtpCode.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\OtpCode.cs",
-              "RelativeDocumentMoniker": "Models\\OtpCode.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\OtpCode.cs",
-              "RelativeToolTip": "Models\\OtpCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Title": "BookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\BookingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Bookings\\BookingDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\BookingDto.cs",
+              "RelativeToolTip": "DTOs\\Bookings\\BookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:49:12.324Z",
+              "WhenOpened": "2025-12-19T13:59:49.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OpeningHour.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\OpeningHour.cs",
-              "RelativeDocumentMoniker": "Models\\OpeningHour.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\OpeningHour.cs",
-              "RelativeToolTip": "Models\\OpeningHour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "UpdateBookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\UpdateBookingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Bookings\\UpdateBookingDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Bookings\\UpdateBookingDto.cs",
+              "RelativeToolTip": "DTOs\\Bookings\\UpdateBookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:46:49.4Z",
+              "WhenOpened": "2025-12-19T13:59:49.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Customer.cs",
-              "RelativeToolTip": "Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Title": "RequestOtpDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Auth\\RequestOtpDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\RequestOtpDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Auth\\RequestOtpDto.cs",
+              "RelativeToolTip": "DTOs\\Auth\\RequestOtpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:45:04.085Z",
+              "WhenOpened": "2025-12-19T14:00:46.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateServiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\UpdateServiceDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Services\\UpdateServiceDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\UpdateServiceDto.cs",
+              "RelativeToolTip": "DTOs\\Services\\UpdateServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:27.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\ServiceDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Services\\ServiceDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\ServiceDto.cs",
+              "RelativeToolTip": "DTOs\\Services\\ServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:19.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateServiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\CreateServiceDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Services\\CreateServiceDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Services\\CreateServiceDto.cs",
+              "RelativeToolTip": "DTOs\\Services\\CreateServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:23.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateOpeningHourDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\UpdateOpeningHourDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\OpeningHours\\UpdateOpeningHourDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\UpdateOpeningHourDto.cs",
+              "RelativeToolTip": "DTOs\\OpeningHours\\UpdateOpeningHourDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:42.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OpeningHourDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\OpeningHourDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\OpeningHours\\OpeningHourDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\OpeningHourDto.cs",
+              "RelativeToolTip": "DTOs\\OpeningHours\\OpeningHourDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:32.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateOpeningHourDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\CreateOpeningHourDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\OpeningHours\\CreateOpeningHourDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\OpeningHours\\CreateOpeningHourDto.cs",
+              "RelativeToolTip": "DTOs\\OpeningHours\\CreateOpeningHourDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:36.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "booking-backend",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\booking-backend.csproj",
+              "RelativeDocumentMoniker": "booking-backend.csproj",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\booking-backend.csproj",
+              "RelativeToolTip": "booking-backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-19T13:56:39.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BusinessDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\BusinessDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Businesses\\BusinessDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\BusinessDto.cs",
+              "RelativeToolTip": "DTOs\\Businesses\\BusinessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:59:52.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateBusinessDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\CreateBusinessDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Businesses\\CreateBusinessDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\CreateBusinessDto.cs",
+              "RelativeToolTip": "DTOs\\Businesses\\CreateBusinessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:59:56.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateBusinessDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\UpdateBusinessDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Businesses\\UpdateBusinessDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Businesses\\UpdateBusinessDto.cs",
+              "RelativeToolTip": "DTOs\\Businesses\\UpdateBusinessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:00.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\CustomerDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Customers\\CustomerDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\CustomerDto.cs",
+              "RelativeToolTip": "DTOs\\Customers\\CustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:06.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateCustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\CreateCustomerDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Customers\\CreateCustomerDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\CreateCustomerDto.cs",
+              "RelativeToolTip": "DTOs\\Customers\\CreateCustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:10.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdateCustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\UpdateCustomerDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Customers\\UpdateCustomerDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Customers\\UpdateCustomerDto.cs",
+              "RelativeToolTip": "DTOs\\Customers\\UpdateCustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:14.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VerifyOtpDto.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Auth\\VerifyOtpDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\VerifyOtpDto.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\DTOs\\Auth\\VerifyOtpDto.cs",
+              "RelativeToolTip": "DTOs\\Auth\\VerifyOtpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:50.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookingSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Data\\BookingSystemDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\BookingSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Data\\BookingSystemDbContext.cs",
+              "RelativeToolTip": "Data\\BookingSystemDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:54:06.663Z",
               "EditorCaption": ""
             },
             {
@@ -111,69 +363,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Business.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Business.cs",
-              "RelativeDocumentMoniker": "Models\\Business.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Business.cs",
-              "RelativeToolTip": "Models\\Business.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:23:48.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:02:33.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:02:32.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T12:02:32.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "booking-backend.csproj",
-              "DocumentMoniker": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\booking-backend.csproj",
-              "RelativeDocumentMoniker": "booking-backend.csproj",
-              "ToolTip": "C:\\Users\\gusta\\Desktop\\booking-system\\booking-backend\\booking-backend.csproj",
-              "RelativeToolTip": "booking-backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-18T12:02:31.49Z"
             }
           ]
         }
