@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using booking_backend.Data;
+using booking_backend.Services.Bookings;
+using booking_backend.Services.Businesses;
+using booking_backend.Services.Customers;
+using booking_backend.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,12 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<BookingSystemDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BookingSystemDb")));
+
+// Register services
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IBusinessService, BusinessService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 var app = builder.Build();
 

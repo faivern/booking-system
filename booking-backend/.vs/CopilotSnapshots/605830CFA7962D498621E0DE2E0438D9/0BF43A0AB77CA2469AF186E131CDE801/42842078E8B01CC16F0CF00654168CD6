@@ -1,0 +1,25 @@
+﻿using booking_backend.DTOs.Bookings;
+
+namespace booking_backend.Services.Bookings;
+
+/// Service interface for managing bookings
+public interface IBookingService
+{
+    /// Creates a new booking
+    Task<BookingDto> CreateBookingAsync(CreateBookingDto request, CancellationToken cancellationToken = default);
+
+    /// Retrieves a booking by ID
+    Task<BookingDto?> GetBookingByIdAsync(int bookingId, CancellationToken cancellationToken = default);
+
+    /// Retrieves all bookings for a customer
+    Task<IEnumerable<BookingDto>> GetCustomerBookingsAsync(int customerId, CancellationToken cancellationToken = default);
+
+    /// Retrieves all bookings for a business
+    Task<IEnumerable<BookingDto>> GetBusinessBookingsAsync(int businessId, CancellationToken cancellationToken = default);
+
+    /// Updates an existing booking
+    Task<BookingDto?> UpdateBookingAsync(int bookingId, UpdateBookingDto request, CancellationToken cancellationToken = default);
+
+    /// Deletes a booking
+    Task<bool> DeleteBookingAsync(int bookingId, CancellationToken cancellationToken = default);
+}
