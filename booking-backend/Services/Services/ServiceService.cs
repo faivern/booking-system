@@ -5,9 +5,7 @@ using booking_backend.Models;
 
 namespace booking_backend.Services.Services;
 
-/// <summary>
 /// Service for managing services
-/// </summary>
 public class ServiceService : IServiceService
 {
     private readonly BookingSystemDbContext _context;
@@ -17,9 +15,7 @@ public class ServiceService : IServiceService
         _context = context;
     }
 
-    /// <summary>
     /// Creates a new service
-    /// </summary>
     public async Task<ServiceDto> CreateServiceAsync(CreateServiceDto request, CancellationToken cancellationToken = default)
     {
         // Validate required fields
@@ -63,9 +59,7 @@ public class ServiceService : IServiceService
         return MapToDto(service, business);
     }
 
-    /// <summary>
     /// Retrieves a service by ID
-    /// </summary>
     public async Task<ServiceDto?> GetServiceByIdAsync(int serviceId, CancellationToken cancellationToken = default)
     {
         var service = await _context.Services
@@ -75,9 +69,7 @@ public class ServiceService : IServiceService
         return service == null ? null : MapToDto(service, service.Business!);
     }
 
-    /// <summary>
     /// Retrieves all services for a business
-    /// </summary>
     public async Task<IEnumerable<ServiceDto>> GetBusinessServicesAsync(int businessId, CancellationToken cancellationToken = default)
     {
         var services = await _context.Services
@@ -89,9 +81,7 @@ public class ServiceService : IServiceService
         return services.Select(s => MapToDto(s, s.Business!));
     }
 
-    /// <summary>
     /// Updates an existing service
-    /// </summary>
     public async Task<ServiceDto?> UpdateServiceAsync(int serviceId, UpdateServiceDto request, CancellationToken cancellationToken = default)
     {
         var service = await _context.Services
@@ -131,9 +121,7 @@ public class ServiceService : IServiceService
         return MapToDto(service, service.Business!);
     }
 
-    /// <summary>
     /// Deletes a service
-    /// </summary>
     public async Task<bool> DeleteServiceAsync(int serviceId, CancellationToken cancellationToken = default)
     {
         var service = await _context.Services
@@ -150,9 +138,7 @@ public class ServiceService : IServiceService
         return true;
     }
 
-    /// <summary>
     /// Maps a Service entity to a ServiceDto
-    /// </summary>
     private static ServiceDto MapToDto(Service service, Business business)
     {
         return new ServiceDto(

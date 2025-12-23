@@ -5,9 +5,7 @@ using booking_backend.Models;
 
 namespace booking_backend.Services.Businesses;
 
-/// <summary>
 /// Service for managing businesses
-/// </summary>
 public class BusinessService : IBusinessService
 {
     private readonly BookingSystemDbContext _context;
@@ -17,9 +15,7 @@ public class BusinessService : IBusinessService
         _context = context;
     }
 
-    /// <summary>
     /// Creates a new business
-    /// </summary>
     public async Task<BusinessDto> CreateBusinessAsync(CreateBusinessDto request, CancellationToken cancellationToken = default)
     {
         // Validate required fields
@@ -42,9 +38,7 @@ public class BusinessService : IBusinessService
         return MapToDto(business);
     }
 
-    /// <summary>
     /// Retrieves a business by ID
-    /// </summary>
     public async Task<BusinessDto?> GetBusinessByIdAsync(int businessId, CancellationToken cancellationToken = default)
     {
         var business = await _context.Businesses
@@ -53,9 +47,7 @@ public class BusinessService : IBusinessService
         return business == null ? null : MapToDto(business);
     }
 
-    /// <summary>
     /// Retrieves all businesses
-    /// </summary>
     public async Task<IEnumerable<BusinessDto>> GetAllBusinessesAsync(CancellationToken cancellationToken = default)
     {
         var businesses = await _context.Businesses
@@ -65,9 +57,7 @@ public class BusinessService : IBusinessService
         return businesses.Select(MapToDto);
     }
 
-    /// <summary>
     /// Updates an existing business
-    /// </summary>
     public async Task<BusinessDto?> UpdateBusinessAsync(int businessId, UpdateBusinessDto request, CancellationToken cancellationToken = default)
     {
         var business = await _context.Businesses
@@ -95,9 +85,7 @@ public class BusinessService : IBusinessService
         return MapToDto(business);
     }
 
-    /// <summary>
     /// Deletes a business
-    /// </summary>
     public async Task<bool> DeleteBusinessAsync(int businessId, CancellationToken cancellationToken = default)
     {
         var business = await _context.Businesses
@@ -114,9 +102,7 @@ public class BusinessService : IBusinessService
         return true;
     }
 
-    /// <summary>
     /// Maps a Business entity to a BusinessDto
-    /// </summary>
     private static BusinessDto MapToDto(Business business)
     {
         return new BusinessDto(

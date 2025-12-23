@@ -5,9 +5,7 @@ using booking_backend.Models;
 
 namespace booking_backend.Services.Bookings;
 
-/// <summary>
 /// Service for managing bookings
-/// </summary>
 public class BookingService : IBookingService
 {
     private readonly BookingSystemDbContext _context;
@@ -17,9 +15,7 @@ public class BookingService : IBookingService
         _context = context;
     }
 
-    /// <summary>
     /// Creates a new booking with validation
-    /// </summary>
     public async Task<BookingDto> CreateBookingAsync(CreateBookingDto request, CancellationToken cancellationToken = default)
     {
         // Validate time range
@@ -84,9 +80,7 @@ public class BookingService : IBookingService
         return MapToDto(booking, business, service, customer);
     }
 
-    /// <summary>
     /// Retrieves a booking by ID
-    /// </summary>
     public async Task<BookingDto?> GetBookingByIdAsync(int bookingId, CancellationToken cancellationToken = default)
     {
         var booking = await _context.Bookings
@@ -98,9 +92,7 @@ public class BookingService : IBookingService
         return booking == null ? null : MapToDto(booking, booking.Business!, booking.Service!, booking.Customer!);
     }
 
-    /// <summary>
     /// Retrieves all bookings for a customer
-    /// </summary>
     public async Task<IEnumerable<BookingDto>> GetCustomerBookingsAsync(int customerId, CancellationToken cancellationToken = default)
     {
         var bookings = await _context.Bookings
@@ -114,9 +106,7 @@ public class BookingService : IBookingService
         return bookings.Select(b => MapToDto(b, b.Business!, b.Service!, b.Customer!));
     }
 
-    /// <summary>
     /// Retrieves all bookings for a business
-    /// </summary>
     public async Task<IEnumerable<BookingDto>> GetBusinessBookingsAsync(int businessId, CancellationToken cancellationToken = default)
     {
         var bookings = await _context.Bookings
@@ -130,9 +120,7 @@ public class BookingService : IBookingService
         return bookings.Select(b => MapToDto(b, b.Business!, b.Service!, b.Customer!));
     }
 
-    /// <summary>
     /// Updates an existing booking
-    /// </summary>
     public async Task<BookingDto?> UpdateBookingAsync(int bookingId, UpdateBookingDto request, CancellationToken cancellationToken = default)
     {
         var booking = await _context.Bookings
@@ -175,9 +163,7 @@ public class BookingService : IBookingService
         return MapToDto(booking, booking.Business!, booking.Service!, booking.Customer!);
     }
 
-    /// <summary>
     /// Deletes a booking
-    /// </summary>
     public async Task<bool> DeleteBookingAsync(int bookingId, CancellationToken cancellationToken = default)
     {
         var booking = await _context.Bookings
@@ -194,9 +180,7 @@ public class BookingService : IBookingService
         return true;
     }
 
-    /// <summary>
     /// Maps a Booking entity to a BookingDto
-    /// </summary>
     private static BookingDto MapToDto(Booking booking, Business business, Service service, Customer customer)
     {
         return new BookingDto(

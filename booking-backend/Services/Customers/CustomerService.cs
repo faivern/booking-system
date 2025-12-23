@@ -5,9 +5,7 @@ using booking_backend.Models;
 
 namespace booking_backend.Services.Customers;
 
-/// <summary>
 /// Service for managing customers
-/// </summary>
 public class CustomerService : ICustomerService
 {
     private readonly BookingSystemDbContext _context;
@@ -17,9 +15,7 @@ public class CustomerService : ICustomerService
         _context = context;
     }
 
-    /// <summary>
     /// Creates a new customer
-    /// </summary>
     public async Task<CustomerDto> CreateCustomerAsync(CreateCustomerDto request, CancellationToken cancellationToken = default)
     {
         // Validate required fields
@@ -47,9 +43,7 @@ public class CustomerService : ICustomerService
         return MapToDto(customer);
     }
 
-    /// <summary>
     /// Retrieves a customer by ID
-    /// </summary>
     public async Task<CustomerDto?> GetCustomerByIdAsync(int customerId, CancellationToken cancellationToken = default)
     {
         var customer = await _context.Customers
@@ -58,9 +52,7 @@ public class CustomerService : ICustomerService
         return customer == null ? null : MapToDto(customer);
     }
 
-    /// <summary>
     /// Retrieves all customers
-    /// </summary>
     public async Task<IEnumerable<CustomerDto>> GetAllCustomersAsync(CancellationToken cancellationToken = default)
     {
         var customers = await _context.Customers
@@ -71,9 +63,7 @@ public class CustomerService : ICustomerService
         return customers.Select(MapToDto);
     }
 
-    /// <summary>
     /// Updates an existing customer
-    /// </summary>
     public async Task<CustomerDto?> UpdateCustomerAsync(int customerId, UpdateCustomerDto request, CancellationToken cancellationToken = default)
     {
         var customer = await _context.Customers
@@ -106,9 +96,7 @@ public class CustomerService : ICustomerService
         return MapToDto(customer);
     }
 
-    /// <summary>
     /// Deletes a customer
-    /// </summary>
     public async Task<bool> DeleteCustomerAsync(int customerId, CancellationToken cancellationToken = default)
     {
         var customer = await _context.Customers
@@ -125,9 +113,7 @@ public class CustomerService : ICustomerService
         return true;
     }
 
-    /// <summary>
     /// Maps a Customer entity to a CustomerDto
-    /// </summary>
     private static CustomerDto MapToDto(Customer customer)
     {
         return new CustomerDto(
