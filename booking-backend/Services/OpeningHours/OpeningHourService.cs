@@ -12,6 +12,10 @@ public class OpeningHourService : IOpeningHourService
 {
     private readonly BookingSystemDbContext _context;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="OpeningHourService"/> class.
+    /// </summary>
+    /// <param name="context">The database context.</param>
     public OpeningHourService(BookingSystemDbContext context)
     {
         _context = context;

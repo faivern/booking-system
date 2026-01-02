@@ -1,0 +1,94 @@
+namespace booking_backend.Services.Auth;
+
+/// <summary>
+/// Simple admin authentication service using environment variables
+/// </summary>
+public class AdminAuthService : IAdminAuthService
+{
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<AdminAuthService> _logger;
+    // Simple in-memory session store (in production, use distributed cache)
+    private static readonly Dictionary<string, DateTime> _activeSessions = [];
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AdminAuthService"/> class.
+    /// </summary>
+    /// <param name="configuration">The application configuration.</param>
+    /// <param name="logger">The logger instance.</param>
+    public AdminAuthService(IConfiguration configuration, ILogger<AdminAuthService> logger)
+    {
+        _configuration = configuration;
+        _logger = logger;
+    }
+
+    /// <summary>
+    /// Authenticates admin with username and password from environment variables
+    /// </summary>
+    public string? Login(string username, string password)
+    {
+        var adminUsername = _configuration["Admin:Username"];
+        var adminPassword = _configuration["Admin:Password"];
+
+        if (string.IsNullOrWhiteSpace(adminUsername) || string.IsNullOrWhiteSpace(adminPassword))
+        {
+            _logger.LogError("Admin credentials not configured in environment variables");
+            return null;
+        }
+
+        // Validate credentials
+        if (username != adminUsername || password != adminPassword)
+        {
+            _logger.LogWarning("Failed login attempt with username {Username}", username);
+            return null;
+        }
+
+        // Generate session ID
+        var sessionId = Guid.NewGuid().ToString();
+        var expiryTime = DateTime.UtcNow.AddHours(8); // 8-hour session
+
+        _activeSessions[sessionId] = expiryTime;
+
+        _logger.LogInformation("Admin logged in successfully with session {SessionId}", sessionId);
+
+        return sessionId;
+    }
+
+    /// <summary>
+    /// Validates an active session
+    /// </summary>
+    public bool ValidateSession(string sessionId)
+    {
+        if (!_activeSessions.TryGetValue(sessionId, out var expiryTime))
+        {
+            return false;
+        }
+
+        // Check if session has expired
+        if (DateTime.UtcNow > expiryTime)
+        {
+            _activeSessions.Remove(sessionId);
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Logs out an admin session
+    /// </summary>
+    public void Logout(string sessionId)
+    {
+        if (_activeSessions.Remove(sessionId))
+        {
+            _logger.LogInformation("Admin logged out with session {SessionId}", sessionId);
+        }
+    }
+
+    /// <summary>
+    /// Gets the session expiry time
+    /// </summary>
+    public DateTime? GetSessionExpiry(string sessionId)
+    {
+        return _activeSessions.TryGetValue(sessionId, out var expiryTime) ? expiryTime : null;
+    }
+}

@@ -1,0 +1,146 @@
+using Twilio;
+using Twilio.Exceptions;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
+
+namespace booking_backend.Services.Sms;
+
+/// <summary>
+/// SMS service implementation using Twilio
+/// Sends OTP codes and booking reminders
+/// </summary>
+public class TwilioSmsService : ISmsService
+{
+    private readonly ILogger<TwilioSmsService> _logger;
+    private readonly IConfiguration _configuration;
+    private readonly string? _accountSid;
+    private readonly string? _authToken;
+    private readonly string? _fromPhoneNumber;
+    private readonly bool _isConfigured;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="TwilioSmsService"/> class.
+    /// </summary>
+    /// <param name="logger">The logger instance.</param>
+    /// <param name="configuration">The application configuration.</param>
+    public TwilioSmsService(ILogger<TwilioSmsService> logger, IConfiguration configuration)
+    {
+        _logger = logger;
+        _configuration = configuration;
+
+        // Load Twilio credentials from configuration
+        _accountSid = _configuration["Twilio:AccountSid"];
+        _authToken = _configuration["Twilio:AuthToken"];
+        _fromPhoneNumber = _configuration["Twilio:FromPhoneNumber"];
+
+        // Check if Twilio is properly configured
+        _isConfigured = !string.IsNullOrWhiteSpace(_accountSid) &&
+                       !string.IsNullOrWhiteSpace(_authToken) &&
+                       !string.IsNullOrWhiteSpace(_fromPhoneNumber);
+
+        if (!_isConfigured)
+        {
+            _logger.LogWarning("Twilio SMS service is not properly configured. SMS messages will not be sent.");
+        }
+    }
+
+    /// <summary>
+    /// Sends an SMS message via Twilio
+    /// </summary>
+    public async Task<bool> SendSmsAsync(string phoneNumber, string message, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            // Validate phone number
+            if (string.IsNullOrWhiteSpace(phoneNumber) || !IsValidPhoneNumber(phoneNumber))
+            {
+                _logger.LogWarning("Invalid phone number format: {PhoneNumber}", phoneNumber);
+                return false;
+            }
+
+            // Log in development mode instead of sending
+            if (IsDevEnvironment())
+            {
+                _logger.LogWarning("?? SMS Message (DEV MODE) to {PhoneNumber}: {Message}", phoneNumber, message);
+                return await Task.FromResult(true);
+            }
+
+            // Check if Twilio is configured
+            if (!_isConfigured)
+            {
+                _logger.LogError("Twilio is not configured. Cannot send SMS to {PhoneNumber}", phoneNumber);
+                return false;
+            }
+
+            // Send via Twilio
+            return await SendViaTwilioAsync(phoneNumber, message, cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error sending SMS to {PhoneNumber}", phoneNumber);
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Sends SMS via Twilio API
+    /// </summary>
+    private async Task<bool> SendViaTwilioAsync(string phoneNumber, string message, CancellationToken cancellationToken)
+    {
+        try
+        {
+            // Initialize Twilio client with credentials
+            TwilioClient.Init(_accountSid, _authToken);
+
+            // Create and send message using Twilio REST API
+            var smsMessage = await MessageResource.CreateAsync(
+                body: message,
+                from: new PhoneNumber(_fromPhoneNumber),
+                to: new PhoneNumber(phoneNumber));
+
+            if (smsMessage.Sid == null)
+            {
+                _logger.LogError("Failed to send SMS to {PhoneNumber}. No message SID returned.", phoneNumber);
+                return false;
+            }
+
+            _logger.LogInformation(
+                "SMS sent successfully to {PhoneNumber}. MessageSid: {MessageSid}, Status: {Status}",
+                phoneNumber,
+                smsMessage.Sid,
+                smsMessage.Status);
+
+            return true;
+        }
+        catch (TwilioException ex)
+        {
+            _logger.LogError(ex, "Twilio API error while sending SMS to {PhoneNumber}. Error: {Error}", phoneNumber, ex.Message);
+            return false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Network error while sending SMS to {PhoneNumber}", phoneNumber);
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Validates phone number format (E.164 format or similar)
+    /// </summary>
+    private static bool IsValidPhoneNumber(string phoneNumber)
+    {
+        // Accept E.164 format (+1234567890) or similar variations
+        return System.Text.RegularExpressions.Regex.IsMatch(
+            phoneNumber,
+            @"^\+?[\d\s\-()]{7,}$");
+    }
+
+    /// <summary>
+    /// Checks if running in development environment
+    /// </summary>
+    private bool IsDevEnvironment()
+    {
+        var environment = _configuration["ASPNETCORE_ENVIRONMENT"] ?? "Production";
+        return environment.Equals("Development", StringComparison.OrdinalIgnoreCase);
+    }
+}

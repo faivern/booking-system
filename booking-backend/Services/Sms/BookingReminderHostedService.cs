@@ -1,0 +1,77 @@
+namespace booking_backend.Services.Sms;
+
+/// <summary>
+/// Hosted service that periodically sends booking reminders
+/// Runs in the background and checks for upcoming bookings
+/// </summary>
+public class BookingReminderHostedService : BackgroundService
+{
+    private readonly ILogger<BookingReminderHostedService> _logger;
+    private readonly IServiceProvider _serviceProvider;
+
+    // Run every hour to check for bookings needing reminders
+    private static readonly TimeSpan CheckInterval = TimeSpan.FromHours(1);
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BookingReminderHostedService"/> class.
+    /// </summary>
+    /// <param name="logger">The logger instance.</param>
+    /// <param name="serviceProvider">The service provider.</param>
+    public BookingReminderHostedService(
+        ILogger<BookingReminderHostedService> logger,
+        IServiceProvider serviceProvider)
+    {
+        _logger = logger;
+        _serviceProvider = serviceProvider;
+    }
+
+    /// <summary>
+    /// Executes the background service
+    /// </summary>
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _logger.LogInformation("Booking Reminder Service started");
+
+        // Initial delay to allow application to fully start
+        await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            try
+            {
+                // Create a scope for dependency injection
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var reminderService = scope.ServiceProvider.GetRequiredService<IBookingReminderService>();
+                    
+                    var remindersSent = await reminderService.SendUpcomingBookingRemindersAsync(stoppingToken);
+                    
+                    if (remindersSent > 0)
+                    {
+                        _logger.LogInformation("Booking reminder check completed. Sent {Count} reminders", remindersSent);
+                    }
+                }
+
+                // Wait for the next check interval
+                await Task.Delay(CheckInterval, stoppingToken);
+            }
+            catch (OperationCanceledException)
+            {
+                _logger.LogInformation("Booking Reminder Service is stopping");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error in Booking Reminder Service");
+                
+                // Wait before retrying on error
+                try
+                {
+                    await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
+                }
+                catch (OperationCanceledException) { }
+            }
+        }
+
+        _logger.LogInformation("Booking Reminder Service stopped");
+    }
+}

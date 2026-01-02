@@ -14,6 +14,11 @@ public class BookingsController : ControllerBase
     private readonly IBookingService _bookingService;
     private readonly ILogger<BookingsController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BookingsController"/> class.
+    /// </summary>
+    /// <param name="bookingService">The booking service</param>
+    /// <param name="logger">The logger instance</param>
     public BookingsController(IBookingService bookingService, ILogger<BookingsController> logger)
     {
         _bookingService = bookingService;

@@ -14,6 +14,11 @@ public class BusinessesController : ControllerBase
     private readonly IBusinessService _businessService;
     private readonly ILogger<BusinessesController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BusinessesController"/> class.
+    /// </summary>
+    /// <param name="businessService">The business service</param>
+    /// <param name="logger">The logger instance</param>
     public BusinessesController(IBusinessService businessService, ILogger<BusinessesController> logger)
     {
         _businessService = businessService;
