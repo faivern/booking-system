@@ -14,6 +14,11 @@ public class CustomersController : ControllerBase
     private readonly ICustomerService _customerService;
     private readonly ILogger<CustomersController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CustomersController"/> class.
+    /// </summary>
+    /// <param name="customerService">The customer service</param>
+    /// <param name="logger">The logger instance</param>
     public CustomersController(ICustomerService customerService, ILogger<CustomersController> logger)
     {
         _customerService = customerService;

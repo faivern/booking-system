@@ -1,0 +1,24 @@
+﻿{
+  "ConnectionStrings": {
+    "BookingSystemDb": "Server=localhost\\SQLEXPRESS;Database=BookingSystemDb;Trusted_Connection=True;TrustServerCertificate=True"
+  },
+  "Frontend": {
+    "FrontendUrl": "http://localhost:5173"
+  },
+  "Cors": {
+    "AllowedOrigins": [
+      "http://localhost:5173"
+    ]
+  },
+  "Admin": {
+    "Username": "admin",
+    "Password": "admin123"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

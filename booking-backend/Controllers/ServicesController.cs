@@ -14,6 +14,11 @@ public class ServicesController : ControllerBase
     private readonly IServiceService _serviceService;
     private readonly ILogger<ServicesController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ServicesController"/> class.
+    /// </summary>
+    /// <param name="serviceService">The service service</param>
+    /// <param name="logger">The logger instance</param>
     public ServicesController(IServiceService serviceService, ILogger<ServicesController> logger)
     {
         _serviceService = serviceService;

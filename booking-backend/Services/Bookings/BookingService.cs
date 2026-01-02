@@ -10,6 +10,10 @@ public class BookingService : IBookingService
 {
     private readonly BookingSystemDbContext _context;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BookingService"/> class.
+    /// </summary>
+    /// <param name="context">The database context.</param>
     public BookingService(BookingSystemDbContext context)
     {
         _context = context;

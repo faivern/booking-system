@@ -14,6 +14,11 @@ public class OpeningHoursController : ControllerBase
     private readonly IOpeningHourService _openingHourService;
     private readonly ILogger<OpeningHoursController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="OpeningHoursController"/> class.
+    /// </summary>
+    /// <param name="openingHourService">The opening hour service</param>
+    /// <param name="logger">The logger instance</param>
     public OpeningHoursController(IOpeningHourService openingHourService, ILogger<OpeningHoursController> logger)
     {
         _openingHourService = openingHourService;

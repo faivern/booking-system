@@ -6,7 +6,6 @@ C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\booking-
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\booking-backend.runtimeconfig.json
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\booking-backend.dll
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\booking-backend.pdb
-C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\gusta\Desktop\booking-system\booking-backend\obj\Debug\net10.0\booking-backend.csproj.AssemblyReference.cache
 C:\Users\gusta\Desktop\booking-system\booking-backend\obj\Debug\net10.0\rpswa.dswa.cache.json
@@ -74,3 +73,10 @@ C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\runtimes
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Twilio.dll
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\booking-backend.xml
+C:\Users\gusta\Desktop\booking-system\booking-backend\obj\Debug\net10.0\booking-backend.xml
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gusta\Desktop\booking-system\booking-backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

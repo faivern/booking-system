@@ -1,0 +1,83 @@
+﻿using Microsoft.EntityFrameworkCore;
+using booking_backend.Data;
+using booking_backend.Middleware;
+using booking_backend.Services.Auth;
+using booking_backend.Services.Bookings;
+using booking_backend.Services.Businesses;
+using booking_backend.Services.Customers;
+using booking_backend.Services.OpeningHours;
+using booking_backend.Services.Otp;
+using booking_backend.Services.Services;
+using booking_backend.Services.Sms;
+using Microsoft.OpenApi;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+
+// Configure Swagger/OpenAPI        
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Booking System API",
+        Version = "v1",
+        Description = "API for managing business bookings, services, and customers"
+    });
+});
+
+builder.Services.AddDbContext<BookingSystemDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BookingSystemDb")));
+
+// allow CORS for frontend
+var frontendUrl = builder.Configuration["Frontend:FrontendUrl"] ?? "http://localhost:5173";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins(frontendUrl)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
+// Register services
+builder.Services.AddScoped<IAdminAuthService, AdminAuthService>();
+builder.Services.AddScoped<ISmsService, TwilioSmsService>();
+builder.Services.AddScoped<IOtpService, OtpService>();
+builder.Services.AddScoped<IBookingReminderService, BookingReminderService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IBusinessService, BusinessService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IOpeningHourService, OpeningHourService>();
+
+// Register hosted service for periodic booking reminders
+builder.Services.AddHostedService<BookingReminderHostedService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Booking System API v1");
+        options.RoutePrefix = "swagger";
+    });
+    app.UseHttpsRedirection();
+}
+
+app.UseCors("AllowFrontend");
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();      

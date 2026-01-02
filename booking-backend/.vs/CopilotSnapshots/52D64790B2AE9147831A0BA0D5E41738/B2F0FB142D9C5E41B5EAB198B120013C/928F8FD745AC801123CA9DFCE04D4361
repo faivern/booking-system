@@ -1,0 +1,124 @@
+﻿using Microsoft.EntityFrameworkCore;
+using booking_backend.Data;
+using booking_backend.Models;
+
+namespace booking_backend.Services.Sms;
+
+/// <summary>
+/// Service for sending booking reminders via SMS
+/// Sends reminder 36 hours before scheduled booking
+/// </summary>
+public interface IBookingReminderService
+{
+    /// <summary>
+    /// Sends booking reminders to customers with bookings in 36 hours
+    /// Should be called periodically (e.g., hourly via background job)
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>Number of reminders sent</returns>
+    Task<int> SendUpcomingBookingRemindersAsync(CancellationToken cancellationToken = default);
+}
+
+/// <summary>
+/// Implementation of booking reminder service
+/// </summary>
+public class BookingReminderService : IBookingReminderService
+{
+    private readonly BookingSystemDbContext _context;
+    private readonly ISmsService _smsService;
+    private readonly ILogger<BookingReminderService> _logger;
+
+    // Time window: send reminders for bookings between 35.5 and 36.5 hours away
+    private const double ReminderWindowHoursMin = 35.5;
+    private const double ReminderWindowHoursMax = 36.5;
+
+    public BookingReminderService(
+        BookingSystemDbContext context,
+        ISmsService smsService,
+        ILogger<BookingReminderService> logger)
+    {
+        _context = context;
+        _smsService = smsService;
+        _logger = logger;
+    }
+
+    /// <summary>
+    /// Sends booking reminders to customers with bookings in 36 hours
+    /// </summary>
+    public async Task<int> SendUpcomingBookingRemindersAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var now = DateTime.UtcNow;
+            var reminderWindowStart = now.AddHours(ReminderWindowHoursMin);
+            var reminderWindowEnd = now.AddHours(ReminderWindowHoursMax);
+
+            // Get upcoming bookings within the reminder window
+            var upcomingBookings = await _context.Bookings
+                .Where(b => b.StartTime >= reminderWindowStart &&
+                           b.StartTime <= reminderWindowEnd &&
+                           b.Status == "Confirmed")
+                .Include(b => b.Customer)
+                .Include(b => b.Service)
+                .Include(b => b.Business)
+                .ToListAsync(cancellationToken);
+
+            if (!upcomingBookings.Any())
+            {
+                _logger.LogInformation("No upcoming bookings found within reminder window");
+                return 0;
+            }
+
+            int remindersSent = 0;
+
+            foreach (var booking in upcomingBookings)
+            {
+                if (booking.Customer?.Phone == null)
+                {
+                    _logger.LogWarning("Booking {BookingId} has no customer phone number", booking.BookingId);
+                    continue;
+                }
+
+                var reminderMessage = BuildReminderMessage(booking);
+                var sent = await _smsService.SendSmsAsync(booking.Customer.Phone, reminderMessage, cancellationToken);
+
+                if (sent)
+                {
+                    remindersSent++;
+                    _logger.LogInformation(
+                        "Reminder sent for booking {BookingId} to {Phone}",
+                        booking.BookingId,
+                        booking.Customer.Phone);
+                }
+                else
+                {
+                    _logger.LogWarning(
+                        "Failed to send reminder for booking {BookingId} to {Phone}",
+                        booking.BookingId,
+                        booking.Customer.Phone);
+                }
+            }
+
+            _logger.LogInformation("Sent {Count} booking reminders", remindersSent);
+            return remindersSent;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error sending booking reminders");
+            return 0;
+        }
+    }
+
+    /// <summary>
+    /// Builds a reminder message for a booking
+    /// </summary>
+    private static string BuildReminderMessage(Booking booking)
+    {
+        var appointmentTime = booking.StartTime.ToString("MMMM dd 'at' hh:mm tt");
+        var serviceName = booking.Service?.Name ?? "Your service";
+        var businessName = booking.Business?.Name ?? "the business";
+
+        return $"Reminder: You have a booking for {serviceName} at {businessName} on {appointmentTime}. " +
+               $"If you need to cancel or reschedule, please contact the business. See you soon!";
+    }
+}

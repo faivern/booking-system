@@ -1,0 +1,60 @@
+﻿using Microsoft.EntityFrameworkCore;
+using booking_backend.Data;
+using booking_backend.Services.Auth;
+using booking_backend.Services.Bookings;
+using booking_backend.Services.Businesses;
+using booking_backend.Services.Customers;
+using booking_backend.Services.OpeningHours;
+using booking_backend.Services.Otp;
+using booking_backend.Services.Services;
+using booking_backend.Services.Sms;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+builder.Services.AddDbContext<BookingSystemDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BookingSystemDb")));
+
+// allow CORS for frontend
+var frontendUrl = builder.Configuration["Frontend:FrontendUrl"] ?? "http://localhost:5173";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins(frontendUrl)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
+// Register services
+builder.Services.AddScoped<IAdminAuthService, AdminAuthService>();
+builder.Services.AddScoped<ISmsService, SmsService>();
+builder.Services.AddScoped<IOtpService, OtpService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IBusinessService, BusinessService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IOpeningHourService, OpeningHourService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
+
+app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontend");
+
+app.MapControllers();
+
+app.Run();
