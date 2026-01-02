@@ -13,3 +13,37 @@
 # ASP.NET secrets / local config
 appsettings.Development.json
 **/appsettings.Development.json
+
+# Node.js
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/booking-frontend/dist
+
+# Rider
+.idea/
+**/.idea/
+
+# User-specific files
+*.rsuser
+*.DotSettings.user
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS generated files
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Logs
+logs/
+*.log
