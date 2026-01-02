@@ -9,7 +9,7 @@ using booking_backend.Services.OpeningHours;
 using booking_backend.Services.Otp;
 using booking_backend.Services.Services;
 using booking_backend.Services.Sms;
-
+//lgtm
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
