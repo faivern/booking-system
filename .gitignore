@@ -7,11 +7,9 @@
 *.sln.docstates
 
 # Build outputs
-bin/
-obj/
 **/bin/
 **/obj/
 
-# Local app settings (keep a template instead)
+# ASP.NET secrets / local config
 appsettings.Development.json
 **/appsettings.Development.json
