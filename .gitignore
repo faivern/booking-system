@@ -1,13 +1,17 @@
-/dist
-/build
-.env
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+# Visual Studio / Rider
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Local app settings (keep a template instead)
 appsettings.Development.json
-
-.idea/
-.vscode/
-
-.DS_Store
-Thumbs.db
+**/appsettings.Development.json
